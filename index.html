@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Padmini Ramesh</title>
+<meta name="description" content="Padmini Ramesh, PhD student in Sociology at Johns Hopkins University. Research on agrarian change, political economy, welfare and digital governance in India.">
+<meta property="og:title" content="Padmini Ramesh">
+<meta property="og:description" content="PhD student in Sociology at Johns Hopkins University. Land, welfare and the digital state in rural India.">
+<meta property="og:image" content="photos/cover.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Libre+Franklin:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Lora:ital,wght@0,400;0,600;1,400&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Yeseva+One&family=Mukta:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap">
+<style>
+html{-webkit-text-size-adjust:100%}
+img{max-width:100%}
+
+/* Layout: Ivy classic. Crimson-ruled sticky header, portrait and About first, village landscape, then education, publications, talks, experience and contact in one column. */
+:root{color-scheme:light;--cb-bg:#111820;--cb-ink:#F1F4F7;--cb-muted:#9AA6B2;--cb-on:#F2B33D}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:#FFFFFF}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* ---------- Base site (every look builds on these tokens) ---------- */
+#site{--bg:#fff;--surface:#fff;--ink:#1B2430;--muted:#5B6675;--line:#E2E6EC;--accent:#1F5F8B;--accent-soft:#E6F0F7;--warm:#B5651D;--warm-soft:#FBEFE3;--on-accent:#fff;
+  --head:"Source Serif 4",Georgia,serif;--body:"Inter",system-ui,sans-serif;--radius:12px;
+  --lh2:#C9D8B6;--lh1:#8DB06A;--lf:#D4C27A;--ls:#E8B04A;--lw:#F4E7CF;--lr:#A6442E;--lt:#7A5A3A;--ll:#41733A;--sky:#EEF4F7;
+  background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.62;transition:background .25s,color .25s}
+#site a{color:var(--accent);text-underline-offset:3px}
+#site h1,#site h2,#site h3{margin:0;font-family:var(--head);line-height:1.15;text-wrap:balance}
+#site p{margin:0}
+.in{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.topnav{border-bottom:1px solid var(--line);background:var(--surface)}
+.topnav .in{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:62px;flex-wrap:wrap}
+.brand{font-family:var(--head);font-weight:700;font-size:1.2rem;color:var(--ink)!important;text-decoration:none}
+.topnav nav{display:flex;gap:4px;flex-wrap:wrap}
+.topnav nav a{font-size:.9rem;font-weight:600;color:var(--muted)!important;text-decoration:none;padding:8px 10px;border-radius:8px}
+.topnav nav a:hover{color:var(--ink)!important;background:var(--accent-soft)}
+
+.layout{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.hero{padding-block:44px 8px;display:flex;flex-direction:column;gap:22px}
+.id{display:grid;grid-template-columns:200px 1fr;gap:34px;align-items:center}
+.ph{width:200px;height:200px;object-fit:cover;object-position:50% 20%;border-radius:50%;display:block;max-width:100%}
+.id h1{font-size:clamp(2.2rem,5vw,3rem)}
+.role{font-weight:600;margin-top:6px}
+.role span{display:block;font-weight:400;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.btns a{font-size:.9rem;font-weight:600;text-decoration:none;padding:9px 14px;border-radius:8px;border:1px solid var(--line);color:var(--ink)!important;background:var(--surface)}
+.btns a:first-child{background:var(--accent);border-color:var(--accent);color:var(--on-accent)!important}
+.contact-side{display:none}
+.about{display:flex;flex-direction:column;gap:12px;max-width:72ch}
+.about .lbl{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:4px 0 0;padding:0}
+.chips li{font-size:.85rem;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+
+.ls{display:block;width:100%;height:150px;margin-top:10px}
+.ls .sky{fill:var(--sky)} .ls .h2{fill:var(--lh2)} .ls .h1{fill:var(--lh1)} .ls .f{fill:var(--lf)} .ls .s{fill:var(--ls)} .ls .w{fill:var(--lw)} .ls .r{fill:var(--lr)} .ls .d{fill:var(--lt)}
+.ls .t{fill:none;stroke:var(--lt);stroke-width:5;stroke-linecap:round} .ls .l{fill:none;stroke:var(--ll);stroke-width:5;stroke-linecap:round} .ls .row{fill:none;stroke:rgba(0,0,0,.16);stroke-width:2}
+.ls .bird{fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round}
+
+.sec{padding-block:52px 0;display:flex;flex-direction:column;gap:16px}
+.sec > h2{font-size:1.9rem}
+.sec h3{font-size:1.12rem;font-family:var(--body);font-weight:700;margin-top:6px}
+.edu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.card .when{font-size:.84rem;font-weight:700;color:var(--muted)}
+.card .deg{font-family:var(--head);font-size:1.22rem;font-weight:700;line-height:1.25}
+.card .sch{font-weight:600;color:var(--accent)}
+.card .note{font-size:.88rem;color:var(--muted);margin-top:6px}
+.awards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.award{background:var(--warm-soft);border-radius:var(--radius);padding:18px 20px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.award .amt{font-family:var(--head);font-size:1.8rem;font-weight:700;color:var(--warm);line-height:1.1}
+.award .amt small{font-family:var(--body);font-size:.85rem}
+.award .dur{font-weight:700;font-size:.9rem}
+.award .t{font-size:.92rem;margin-top:6px}
+
+.plist{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.plist li{display:grid;grid-template-columns:1fr auto;gap:18px;padding:15px 18px;border-top:1px solid var(--line)}
+.plist li:first-child{border-top:0}
+.pm{min-width:0;display:flex;flex-direction:column;gap:2px}
+.pm .t{font-weight:700;color:var(--ink)!important;text-decoration:none}
+.pm a.t:hover{color:var(--accent)!important;text-decoration:underline}
+.pm .t[lang="hi"]{font-family:"Noto Sans Devanagari",var(--body)}
+.pm .m{font-size:.92rem;color:var(--muted)}
+.pm .b{align-self:flex-start;font-size:.82rem;background:var(--warm-soft);color:var(--ink);border-radius:6px;padding:2px 9px;margin-top:4px}
+.ps{display:flex;flex-direction:column;align-items:flex-end;gap:6px;white-space:nowrap}
+.ps .y{font-weight:700;color:var(--muted)}
+.ps a{font-size:.84rem;font-weight:700;text-decoration:none;background:var(--accent-soft);padding:3px 10px;border-radius:6px}
+
+.dated{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+.dated li{display:grid;grid-template-columns:100px 1fr;gap:16px;padding:14px 18px;border-top:1px solid var(--line)}
+.dated li:first-child{border-top:0}
+.dated .y{font-weight:700;color:var(--muted)}
+.dated .t{font-weight:700}
+.dated .m{font-size:.92rem;color:var(--muted)}
+
+.xp{list-style:none;margin:0;padding:0;position:relative}
+.xp::before{content:"";position:absolute;left:158px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.xp > li{display:grid;grid-template-columns:140px 38px 1fr;align-items:start;padding-bottom:16px}
+.xd{text-align:right;padding-top:14px}
+.xd b{display:block}
+.xd span{font-size:.84rem;color:var(--muted)}
+.xdot{position:relative;height:100%}
+.xdot::after{content:"";position:absolute;left:12px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.xp > li:first-child .xdot::after{background:var(--accent)}
+.xc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;min-width:0}
+.xc .t{font-family:var(--head);font-weight:700;font-size:1.18rem;display:block}
+.xc .o{font-weight:700;color:var(--accent);display:block}
+.xc ul{margin:8px 0 0;padding-left:20px;font-size:.95rem}
+
+.contact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.contact .k{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.contact .v{font-weight:600;overflow-wrap:anywhere}
+.foot{margin-top:56px;border-top:1px solid var(--line);background:var(--surface)}
+.foot .in{padding-block:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.88rem;color:var(--muted)}
+
+/* ============ LOOK 1 · Ivy classic ============ */
+#site[data-look="ivy"]{--bg:#FFFFFF;--surface:#FFFFFF;--ink:#1E1E1E;--muted:#5F5A55;--line:#E7E2DC;--accent:#A51C30;--accent-soft:#F8E8EA;--warm:#A51C30;--warm-soft:#FBF3F1;--head:"Cormorant Garamond",Georgia,serif;--body:"Libre Franklin",sans-serif;--radius:2px;--sky:#FFFFFF}
+#site[data-look="ivy"] .topnav{border-top:6px solid #A51C30}
+#site[data-look="ivy"] .brand{font-size:1.5rem}
+#site[data-look="ivy"] .topnav nav a{text-transform:uppercase;letter-spacing:.06em;font-size:.78rem}
+#site[data-look="ivy"] .ph{border-radius:2px;width:200px;height:240px}
+#site[data-look="ivy"] .id h1{font-size:3.2rem}
+#site[data-look="ivy"] .role{color:#A51C30}
+#site[data-look="ivy"] .sec > h2{font-size:2.1rem;padding-bottom:8px;border-bottom:2px solid #A51C30}
+#site[data-look="ivy"] .btns a{border-radius:0;border-color:#A51C30;color:#A51C30!important}
+#site[data-look="ivy"] .btns a:first-child{color:#fff!important}
+#site[data-look="ivy"] .card .deg,#site[data-look="ivy"] .xc .t{font-size:1.4rem}
+#site[data-look="ivy"] .foot{background:#A51C30;border:0}
+#site[data-look="ivy"] .foot .in{color:#F6DADF}
+
+
+/* Sticky header, dropdown, mobile menu */
+.topnav{position:sticky;top:env(safe-area-inset-top, 0px);z-index:40}
+.topnav nav{align-items:center}
+.drop{font:600 .78rem var(--body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:none;border:0;padding:8px 10px;border-radius:8px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.drop svg{width:10px;height:10px;transition:transform .15s}
+.drop[aria-expanded="true"]{color:var(--ink);background:var(--accent-soft)}
+.drop[aria-expanded="true"] svg{transform:rotate(180deg)}
+.has-menu{position:relative}
+.menu{position:absolute;left:0;top:calc(100% + 8px);width:270px;background:#fff;border:1px solid var(--line);border-top:3px solid #A51C30;box-shadow:0 12px 28px rgba(0,0,0,.1);padding:6px;display:flex;flex-direction:column;z-index:45}
+.menu a{display:flex!important;justify-content:space-between;text-transform:none!important;letter-spacing:0!important;font-size:.9rem!important;color:var(--ink)!important;padding:10px 12px!important}
+.menu a span{font-size:.78rem;color:#A51C30;font-weight:700}
+.menu-toggle{display:none;font:600 .85rem var(--body);color:#A51C30;background:none;border:1px solid #A51C30;padding:7px 14px;cursor:pointer}
+.copy{align-self:flex-start;margin-top:8px;font:600 .82rem var(--body);color:#A51C30;background:var(--accent-soft);border:0;padding:6px 12px;cursor:pointer}
+.topnav .in{flex-wrap:nowrap}
+@media (max-width: 860px){
+  .menu-toggle{display:inline-flex}
+  .topnav nav{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:8px max(20px, env(safe-area-inset-right, 0px)) 14px max(20px, env(safe-area-inset-left, 0px));box-shadow:0 12px 24px rgba(0,0,0,.08)}
+  .topnav nav a,.drop{padding:12px 6px!important;width:100%;justify-content:space-between}
+  .menu{position:static;width:auto;box-shadow:none;border:0;border-left:3px solid #A51C30;margin:0 0 6px 8px}
+}
+
+
+/* ===== Cinematic cover ===== */
+.cover{position:relative;overflow:hidden;color:#fff;isolation:isolate;background:#2A1216}
+.cover::before{content:"";position:absolute;inset:-4%;background:url("photos/cover.jpg") center 60%/cover no-repeat;z-index:-2;animation:drift 28s ease-in-out infinite alternate}
+.cover::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg, rgba(28,10,14,.88) 0%, rgba(28,10,14,.7) 45%, rgba(28,10,14,.25) 100%)}
+@keyframes drift{from{transform:scale(1) translateX(0)}to{transform:scale(1.08) translateX(-2%)}}
+.cover-in{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px));padding-block:72px 64px}
+.cover .id{grid-template-columns:210px 1fr;gap:40px}
+.cover .ph{width:210px!important;height:252px!important;border:6px solid #fff;box-shadow:0 24px 50px rgba(0,0,0,.45)}
+.cover .id h1{color:#fff;font-size:clamp(2.8rem,6vw,4.2rem)!important;letter-spacing:-.01em}
+.cover .role{color:#F4C9D0!important}
+.cover .role span{color:rgba(255,255,255,.82)!important}
+#site .cover .btns a{color:#fff!important}
+.cover .btns a{background:rgba(255,255,255,.08)!important;border-color:rgba(255,255,255,.55)!important;color:#fff!important;backdrop-filter:blur(4px)}
+.cover .btns a:first-child{background:#A51C30!important;border-color:#A51C30!important}
+.cover-credit{position:absolute;right:max(16px, env(safe-area-inset-right, 0px));bottom:12px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.hero{padding-top:36px!important}
+@media (prefers-reduced-motion: reduce){.cover::before{animation:none}}
+
+/* ===== Field Diaries ===== */
+.diaries{margin:64px calc(50% - 50vw) 0;background:#1C1416;color:#F4EDE6;padding-block:72px 80px;position:relative}
+.diaries::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:#A51C30}
+.dia-in{max-width:1180px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px));display:flex;flex-direction:column;gap:26px}
+.dia-head{display:flex;flex-direction:column;gap:10px;max-width:60ch}
+.dia-kicker{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#E8A0AB}
+.dia-head h2{font-family:"Cormorant Garamond",Georgia,serif!important;font-size:clamp(2.8rem,6vw,4.4rem)!important;color:#fff;font-style:italic;font-weight:600;line-height:1}
+.dia-head p{color:#CDBFB6;font-size:1.05rem}
+.dia-filters{display:flex;flex-wrap:wrap;gap:8px}
+.dia-filters button{font:600 .86rem var(--body);color:#F4EDE6;background:transparent;border:1px solid rgba(244,237,230,.28);padding:8px 14px;cursor:pointer;display:inline-flex;gap:8px;align-items:center;transition:background .15s,border-color .15s}
+.dia-filters button span{font-size:.75rem;opacity:.65}
+.dia-filters button:hover{border-color:#E8A0AB}
+.dia-filters button[aria-pressed="true"]{background:#A51C30;border-color:#A51C30;color:#fff}
+.dia-grid{columns:3;column-gap:14px}
+.fd{break-inside:avoid;margin:0 0 14px;position:relative;overflow:hidden;background:#2A2022}
+.fd[hidden]{display:none!important}
+.fd-open{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.fd img{display:block;width:100%;height:auto;transition:transform .6s ease, filter .4s ease;filter:saturate(.95)}
+.fd:hover img{transform:scale(1.045);filter:saturate(1.1)}
+.fd figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;font-size:.88rem;line-height:1.35;color:#fff;background:linear-gradient(transparent, rgba(15,8,10,.85));opacity:0;transform:translateY(8px);transition:opacity .3s, transform .3s;pointer-events:none;display:flex;flex-direction:column;gap:3px}
+.fd:hover figcaption,.fd:focus-within figcaption{opacity:1;transform:none}
+.fd-cat{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E8A0AB}
+.fd-open:focus-visible{outline:3px solid #E8A0AB;outline-offset:-3px}
+@media (max-width: 960px){.dia-grid{columns:2}}
+@media (max-width: 560px){.dia-grid{columns:1}.fd figcaption{position:static;opacity:1;transform:none;background:#2A2022;padding:10px 12px}}
+@media (hover: none){.fd figcaption{opacity:1;transform:none}}
+
+/* ===== Lightbox ===== */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(12,6,8,.95);display:flex;align-items:center;justify-content:center;gap:10px;padding:max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px))}
+.lb-fig{margin:0;display:flex;flex-direction:column;align-items:center;gap:12px;max-width:min(1200px, 100%);min-width:0}
+.lb-fig img{max-width:100%;max-height:calc(100vh - 130px);object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb-fig figcaption{color:#F4EDE6;text-align:center;display:flex;flex-direction:column;gap:4px;font-size:.95rem}
+#lbCat{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E8A0AB}
+#lbCount{font-size:.78rem;color:#9C8F88}
+.lb-close{position:absolute;top:max(14px, env(safe-area-inset-top, 0px));right:max(16px, env(safe-area-inset-right, 0px));width:44px;height:44px;font-size:1.8rem;line-height:1;color:#fff;background:rgba(255,255,255,.08);border:0;cursor:pointer}
+.lb-nav{flex:none;width:48px;height:64px;font-size:2.4rem;line-height:1;color:#fff;background:rgba(255,255,255,.08);border:0;cursor:pointer}
+.lb-nav:hover,.lb-close:hover{background:#A51C30}
+@media (max-width: 640px){.lb-nav{position:absolute;bottom:max(18px, env(safe-area-inset-bottom, 0px));width:52px;height:48px}.lb-prev{left:20px}.lb-next{right:20px}.lb-fig img{max-height:calc(100vh - 190px)}}
+
+@media (max-width: 820px){.cover .id{grid-template-columns:1fr!important}.cover .ph{width:170px!important;height:204px!important}.cover-in{padding-block:44px 48px}}
+
+
+/* ===== Pages ===== */
+.view[hidden]{display:none!important}
+.pagehead{background:#FBF7F5;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.pagehead::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:40px solid rgba(165,28,48,.06)}
+.ph-in{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px));padding-block:52px 40px;display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+.ph-kick{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#A51C30}
+.pagehead h1{font-family:"Cormorant Garamond",Georgia,serif!important;font-size:clamp(2.6rem,6vw,3.8rem)!important;line-height:1}
+.pagehead p{color:var(--muted);max-width:60ch}
+.subtabs{display:flex;flex-wrap:wrap;gap:6px;padding-top:32px;border-bottom:1px solid var(--line)}
+.subtabs a{font-size:.9rem;font-weight:600;color:var(--muted)!important;text-decoration:none;padding:10px 4px 12px;margin-right:16px;border-bottom:3px solid transparent;margin-bottom:-1px}
+.subtabs a span{font-size:.76rem;color:#A51C30;margin-left:4px}
+.subtabs a[aria-current="page"]{color:var(--ink)!important;border-bottom-color:#A51C30}
+.pgroup{display:flex;flex-direction:column;gap:12px;padding-top:28px}
+.pgroup[hidden]{display:none!important}
+.diaries{margin:0!important}
+.cvnote{max-width:60ch}
+.drop.on,.topnav nav > a.on{color:#A51C30!important}
+
+/* From the field strip */
+.fs-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.fs-all{font-weight:700;text-decoration:none;color:#A51C30!important}
+.fs-all:hover{text-decoration:underline}
+.fs-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:10px}
+.fs-item{position:relative;overflow:hidden;display:block;background:#2A2022}
+.fs-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+.fs-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.fs-item:hover img{transform:scale(1.05)}
+.fs-item span{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.84rem;color:#fff;background:linear-gradient(transparent, rgba(15,8,10,.8));opacity:0;transition:opacity .3s}
+.fs-item:hover span,.fs-item:focus-visible span{opacity:1}
+@media (hover: none){.fs-item span{opacity:1}}
+@media (max-width: 700px){.fs-grid{grid-template-columns:1fr 1fr;grid-auto-rows:140px}.fs-item:nth-child(4){grid-column:span 1}}
+
+/* Footer */
+.foot2{margin-top:72px;background:#A51C30;color:#F8E3E6}
+.f-in{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px));padding-block:44px 32px;display:grid;grid-template-columns:1.2fr 1.2fr 1fr;gap:28px}
+.f-col{display:flex;flex-direction:column;gap:6px;font-size:.94rem;min-width:0}
+.f-name{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.7rem;font-weight:700;color:#fff;line-height:1.1}
+.f-k{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;opacity:.8}
+.foot2 a{color:#fff!important;text-underline-offset:3px}
+.f-email{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:600;color:#fff}
+.foot2 .copy{margin:0;background:rgba(255,255,255,.16);color:#fff;font-size:.78rem;padding:3px 10px}
+.f-base{border-top:1px solid rgba(255,255,255,.18);max-width:1080px;margin:0 auto;padding:16px max(20px, env(safe-area-inset-right, 0px)) 20px max(20px, env(safe-area-inset-left, 0px));display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.82rem}
+@media (max-width: 760px){.f-in{grid-template-columns:1fr}}
+
+
+/* ===== From the field band ===== */
+.fieldband{margin:72px calc(50% - 50vw) 0;background:#F6EFE6;position:relative;overflow:hidden}
+.fieldband::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(120,80,50,.07) 1px, transparent 1.2px);background-size:14px 14px;pointer-events:none}
+.fieldband::after{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:#A51C30}
+.fb-in{position:relative;max-width:1180px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px));padding-block:76px 84px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.fb-text{display:flex;flex-direction:column;gap:16px;min-width:0}
+.fb-kick{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#A51C30}
+.fb-text h2{font-family:"Cormorant Garamond",Georgia,serif!important;font-style:italic;font-weight:600;font-size:clamp(2.8rem,5.4vw,4.2rem)!important;line-height:.95;color:#2A1A1C}
+.fb-text p{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.32rem;line-height:1.45;color:#4A3B36;max-width:34ch}
+.fb-places{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7A5E52}
+.fb-places li+li::before{content:"·";margin-right:14px;color:#A51C30}
+.fb-btn{align-self:flex-start;margin-top:6px;display:inline-flex;gap:10px;align-items:center;background:#A51C30;color:#fff!important;text-decoration:none;font-weight:700;padding:13px 22px;transition:background .2s, gap .2s}
+.fb-btn:hover{background:#861526;gap:16px}
+.fb-count{font-size:.85rem;color:#7A5E52}
+
+.collage{position:relative;height:540px;min-width:0}
+.print{position:absolute;display:block;background:#fff;padding:10px 10px 0;box-shadow:0 2px 3px rgba(60,30,20,.12), 0 18px 36px rgba(60,30,20,.18);text-decoration:none;transition:transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s;transform:rotate(var(--r))}
+.print img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.print span{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:1.05rem;color:#3A2A26;padding:8px 4px 12px;text-align:center;line-height:1.2}
+.print:hover,.print:focus-visible{transform:rotate(0) scale(1.06) translateY(-6px);z-index:10;box-shadow:0 4px 6px rgba(60,30,20,.14), 0 30px 60px rgba(60,30,20,.28)}
+.print::before{content:"";position:absolute;top:-10px;left:50%;width:70px;height:20px;margin-left:-35px;background:rgba(232,214,180,.75);transform:rotate(-3deg);box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.p1{left:0;top:4%;width:56%;--r:-3deg;z-index:2}
+.p2{left:50%;top:0;width:44%;--r:4deg;z-index:3}
+.p3{left:4%;top:54%;width:38%;--r:2.5deg;z-index:4}
+.p4{left:38%;top:47%;width:36%;--r:-4deg;z-index:5}
+.p5{left:70%;top:55%;width:30%;--r:6deg;z-index:6}
+@media (max-width: 900px){
+  .fb-in{grid-template-columns:1fr;gap:36px;padding-block:56px 64px}
+  .collage{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px 14px}
+  .print{position:relative;left:auto!important;top:auto!important;width:auto!important}
+  .p1{grid-column:span 2}
+  .print span{font-size:.95rem}
+  .collage{padding:8px 6px 0}
+  .print{transform:rotate(calc(var(--r) * .45))}
+  .print:hover,.print:focus-visible{transform:scale(1.03)}
+}
+@media (prefers-reduced-motion: reduce){.print{transition:none}}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 820px){
+  .id{grid-template-columns:1fr!important;gap:18px}
+  .id .ph{order:0!important}
+  .edu,.awards,.contact{grid-template-columns:1fr}
+  .plist li{grid-template-columns:1fr}
+  .ps{flex-direction:row;align-items:center}
+  .dated li{grid-template-columns:1fr;gap:2px}
+  .xp::before{left:6px}
+  .xp > li{grid-template-columns:28px 1fr;grid-template-areas:"dot date" "dot card"}
+  .xdot{grid-area:dot} .xdot::after{left:0!important;top:4px!important}
+  .xd{grid-area:date;text-align:left;padding:0 0 6px;display:flex;gap:10px}
+  .xc{grid-area:card}
+}
+</style>
+</head>
+<body>
+<div id="site" data-look="ivy">
+  <header class="topnav" id="top"><div class="in"><a class="brand" href="#home">Padmini Ramesh</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+    <nav aria-label="Site sections" id="siteNav">
+      <a href="#home" data-nav="home">Home</a>
+      <div class="has-menu"><button class="drop" type="button" aria-expanded="false" aria-controls="m-pubs" data-nav="publications">Publications <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="menu" id="m-pubs" hidden><a href="#publications">All publications <span>14</span></a><a href="#articles">Journal articles &amp; chapters <span>3</span></a><a href="#reports">Policy reports <span>2</span></a><a href="#media">Media &amp; op-eds <span>9</span></a></div></div>
+      <div class="has-menu"><button class="drop" type="button" aria-expanded="false" aria-controls="m-dia" data-nav="diaries">Field Diaries <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <div class="menu" id="m-dia" hidden><a href="#diaries">All photographs <span>28</span></a><a href="#women">Women's collectives <span>6</span></a><a href="#village">Village life <span>10</span></a><a href="#land">Land &amp; fields <span>7</span></a><a href="#road">On the road <span>5</span></a></div></div>
+      <a href="#talks" data-nav="talks">Talks</a>
+      <a href="#cv" data-nav="cv">CV</a>
+    </nav></div></header>
+  <main>
+    <div class="view" data-view="home">
+      <div class="cover"><div class="cover-in"><div class="id">
+        <img class="ph" alt="Padmini Ramesh" src="photos/portrait.jpg">
+        <div>
+          <h1>Padmini Ramesh</h1>
+          <p class="role">PhD Student, Department of Sociology<span>Johns Hopkins University, Baltimore</span></p>
+          <div class="btns"><a href="mailto:pramesh6@jh.edu" id="emailBtn">pramesh6@jh.edu</a><a href="#contact">CV</a><a href="https://scholar.google.com/citations?user=ZpzzuZ4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a><a href="https://www.linkedin.com/in/padmini-ramesh-5603aa123/" target="_blank" rel="noopener">LinkedIn</a></div>
+          
+        </div>
+      </div></div><span class="cover-credit">Fieldwork, rural India</span></div>
+      <div class="layout">
+        <section class="hero" id="about">
+      <div class="about">
+        <span class="lbl">About me</span>
+        <p>I am a PhD student in Sociology at Johns Hopkins University. I study how the Indian state reaches rural citizens through land, welfare and data, and what changes for people when land records, cash transfers and welfare entitlements move onto digital systems. My earlier work includes a study of land records modernisation in Telangana, writing on digital welfare and citizenship, and reporting on rural jobs, women's self-help groups and village planning. I have done fieldwork in Telangana, Kerala, Jharkhand and North East India.</p>
+        <p>Before my PhD, I worked for five years in India's rural development sector. At Kudumbashree NRO, I helped write national guidelines for village-level planning and helped design the Village Poverty Reduction Plan app, now used across India. I worked with community workers in North East India covering about 50,000 women's self-help groups, and at The Nudge Institute I led a study on women's collectives among India's poorest households.</p>
+        <p>I hold an MA in Development Studies from the Tata Institute of Social Sciences, Mumbai, and a BA (Hons) in Business Economics from the University of Delhi.</p>
+        <ul class="chips"><li>Agrarian change</li><li>Political economy</li><li>Welfare</li><li>Digital governance</li><li>Land governance</li><li>Economic sociology</li></ul>
+      </div>
+    </section>
+        <svg class="ls" viewBox="0 0 1200 180" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><rect class="sky" width="1200" height="180"/><circle class="s" cx="985" cy="92" r="32"/><g transform="translate(0 30)"><path class="bird" d="M690 22q8-8 16 0q8-8 16 0"/><path class="bird" d="M735 8q6-6 12 0q6-6 12 0"/></g><path class="h2" d="M0 116C150 72 300 94 420 82C560 70 700 108 860 88C1000 72 1100 94 1200 78V180H0Z"/><path class="h1" d="M0 140C200 106 380 128 560 116C760 102 900 136 1200 110V180H0Z"/><path class="f" d="M428 136Q450 100 472 136Z"/><g><rect class="w" x="250" y="102" width="62" height="34"/><path class="r" d="M238 106L281 78L324 106Z"/><rect class="d" x="274" y="117" width="14" height="19"/></g><g><rect class="w" x="330" y="114" width="40" height="22"/><path class="r" d="M322 117L350 98L378 117Z"/></g><path class="f" d="M0 156C300 136 700 150 1200 138V180H0Z"/><path class="row" d="M0 166C300 148 700 161 1200 150"/><path class="row" d="M0 175C300 159 700 171 1200 162"/><g transform="translate(150 -34)"><path class="t" d="M10 182C8 158 12 136 20 112"/><path class="l" d="M20 112C0 102-15 106-25 117M20 112C40 100 56 104 66 114M20 112C10 94-2 90-14 92M20 112C32 92 46 88 58 92M20 112C20 97 22 90 26 84"/></g><g transform="translate(1060 -40)"><path class="t" d="M10 182C8 158 12 136 20 112"/><path class="l" d="M20 112C0 102-15 106-25 117M20 112C40 100 56 104 66 114M20 112C10 94-2 90-14 92M20 112C32 92 46 88 58 92M20 112C20 97 22 90 26 84"/></g></svg>
+        <section class="sec" id="education">
+      <h2>Education &amp; scholarships</h2>
+      <div class="edu">
+        <div class="card"><span class="when">2025 to present</span><span class="deg">PhD, Sociology</span><span class="sch">Johns Hopkins University</span></div>
+        <div class="card"><span class="when">2018–2020</span><span class="deg">MA, Development Studies</span><span class="sch">Tata Institute of Social Sciences</span><span class="note">Dissertation on the Rythu Bandhu cash transfer and land records in Telangana. <a href="https://www.indiaspend.com/wp-content/uploads/2020/06/Dissertation_M2018DS028_Padmini-Ramesh.pdf" target="_blank" rel="noopener">Read (PDF)</a></span></div>
+        <div class="card"><span class="when">2015–2018</span><span class="deg">BA (Hons), Business Economics</span><span class="sch">University of Delhi</span></div>
+      </div>
+      <h3>Fully funded PhD studentships offered, 2025</h3>
+      <div class="awards">
+        <div class="award"><span class="amt">£20,780<small> a year</small></span><span class="dur">for 3.5 years</span><span class="t">ESRC Midlands Graduate School DTP Studentship</span></div>
+        <div class="award"><span class="amt">£19,237<small> a year</small></span><span class="dur">for 3 years</span><span class="t">University of Bath PhD Studentship (URSA)</span></div>
+        <div class="award"><span class="amt">£22,780<small> a year</small></span><span class="dur">for 3 years</span><span class="t">Funded Research Studentship, Queen Mary University of London</span></div>
+      </div>
+    </section>
+        <section class="sec" id="experience">
+      <h2>Career</h2>
+      <ol class="xp">
+        <li><div class="xd"><b>2025–2026</b><span>Baltimore</span></div><div class="xdot"></div><div class="xc"><span class="t">Research Assistant</span><span class="o">Department of Sociology, Johns Hopkins University</span><ul><li>Research with Professor Monica Prasad on Supreme Court rulings on urban slum evictions in India.</li></ul></div></li>
+        <li><div class="xd"><b>2023–2025</b><span>India</span></div><div class="xdot"></div><div class="xc"><span class="t">Research Consultant and Senior Associate</span><span class="o">The Nudge Institute</span><ul><li>Designed and led a study on strengthening women's groups among the poorest households.</li><li>Gathered lessons from Graduation Approach programmes across India.</li></ul></div></li>
+        <li><div class="xd"><b>2020–2022</b><span>Kerala, North East India</span></div><div class="xdot"></div><div class="xc"><span class="t">Thematic Anchor and Field Coordinator</span><span class="o">Kudumbashree NRO</span><ul><li>Helped write national guidelines for participatory rural development.</li><li>Helped design the Village Poverty Reduction Plan app, now used across India.</li><li>Worked with 58+ community workers covering about 50,000 self-help groups.</li></ul></div></li>
+        <li><div class="xd"><b>2020</b><span>India</span></div><div class="xdot"></div><div class="xc"><span class="t">Research Consultant</span><span class="o">Centre for Land Governance</span><ul><li>Designed the research method for a study of the Model Land Leasing Act 2016, published in <i>Land Use Policy</i>.</li></ul></div></li>
+      </ol>
+    </section>
+        <section class="fieldband" id="field">
+          <div class="fb-in">
+            <div class="fb-text">
+              <span class="fb-kick">Field notes</span>
+              <h2>From the field</h2>
+              <p>Most of what I study, I first learned sitting on a tarpaulin in a village courtyard: in women's group meetings, in paddy fields, over shared lunches, and on long walks between hamlets.</p>
+              <ul class="fb-places"><li>Telangana</li><li>Kerala</li><li>Jharkhand</li><li>North East India</li></ul>
+              <a class="fb-btn" href="#diaries">Open the Field Diaries <span aria-hidden="true">→</span></a>
+              <span class="fb-count">28 photographs · 4 themes</span>
+            </div>
+            <div class="collage"><a class="print p1" href="#diaries"><img src="photos/fd-18-t.jpg" alt="Paddy transplanting" loading="lazy"><span>Paddy transplanting</span></a><a class="print p2" href="#diaries"><img src="photos/fd-02-t.jpg" alt="Women's group meeting" loading="lazy"><span>Women's group meeting</span></a><a class="print p3" href="#diaries"><img src="photos/fd-11-t.jpg" alt="Dusk at the village pond" loading="lazy"><span>Dusk at the village pond</span></a><a class="print p4" href="#diaries"><img src="photos/fd-15-t.jpg" alt="Hands joined, end of a meeting" loading="lazy"><span>Hands joined, end of a meeting</span></a><a class="print p5" href="#diaries"><img src="photos/fd-27-t.jpg" alt="Lunch in the field" loading="lazy"><span>Lunch in the field</span></a></div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="view" data-view="publications" hidden>
+      <div class="pagehead"><div class="ph-in"><span class="ph-kick">Writing</span><h1>Publications</h1><p>Journal articles, book chapters, policy reports, and writing for the public.</p></div></div>
+      <div class="layout"><nav class="subtabs" aria-label="Publication types"><a href="#publications" data-sub="all">All <span>14</span></a><a href="#articles" data-sub="articles">Journal articles &amp; chapters <span>3</span></a><a href="#reports" data-sub="reports">Policy reports <span>2</span></a><a href="#media" data-sub="media">Media &amp; op-eds <span>9</span></a></nav><section class="sec" id="publications">
+      
+      <div class="pgroup" data-group="articles"><h3 id="pub-articles">Journal articles &amp; book chapters</h3>
+      <ol class="plist">
+        <li><div class="pm"><a class="t" href="https://azimpremjiuniversity.edu.in/news/2026/azim-premji-university-launches-realising-rights-a-handbook-of-welfare-in-india" target="_blank" rel="noopener">Clouding Citizenship: The Digital State</a><span class="m">With Rajendran Narayanan. Chapter in <i>Realising Rights: A Handbook of Welfare in India</i>, Azim Premji University</span></div><div class="ps"><span class="y">2026</span><a href="https://azimpremjiuniversity.edu.in/news/2026/azim-premji-university-launches-realising-rights-a-handbook-of-welfare-in-india" target="_blank" rel="noopener">About the book ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://www.theindiaforum.in/politics/datafication-and-erosion-citizenship-rights" target="_blank" rel="noopener">Datafication and the Erosion of Citizenship Rights</a><span class="m">With Rajendran Narayanan. <i>The India Forum</i></span></div><div class="ps"><span class="y">2026</span><a href="https://www.theindiaforum.in/politics/datafication-and-erosion-citizenship-rights" target="_blank" rel="noopener">Read ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://onlinelibrary.wiley.com/doi/10.1111/joac.12556" target="_blank" rel="noopener">Illegibly Legible: Outcomes of a Land Records Modernisation Programme in South India</a><span class="m">With R. Ramakumar. <i>Journal of Agrarian Change</i>, vol. 23</span></div><div class="ps"><span class="y">2023</span><a href="https://onlinelibrary.wiley.com/doi/10.1111/joac.12556" target="_blank" rel="noopener">Read ↗</a></div></li>
+      </ol>
+      </div><div class="pgroup" data-group="reports"><h3 id="pub-reports">Policy reports</h3>
+      <ol class="plist">
+        <li><div class="pm"><span class="t">Community Involvement in Managing Anganwadis in Kerala</span><span class="m">Kudumbashree NRO, Government of Kerala and Government of India</span></div><div class="ps"><span class="y">2022</span></div></li>
+        <li><div class="pm"><span class="t">The State of Decentralised Solid Waste Management in Kerala Report, 2021</span><span class="m">Local Self Government Department, Government of Kerala</span></div><div class="ps"><span class="y">2021</span></div></li>
+      </ol>
+      </div><div class="pgroup" data-group="media"><h3 id="pub-media">Media &amp; op-eds</h3>
+      <ol class="plist">
+        <li><div class="pm"><a class="t" lang="hi" href="https://www.youtube.com/watch?v=Cz7cXibjNG4" target="_blank" rel="noopener">Digital India का काला सच: क्या आपका डेटा आपसे बड़ा हो गया है?</a><span class="m">Video interview, Harkara</span></div><div class="ps"><span class="y">2026</span><a href="https://www.youtube.com/watch?v=Cz7cXibjNG4" target="_blank" rel="noopener">Watch ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://behanbox.com/2026/02/15/when-work-became-a-right-the-social-life-of-mgnrega/" target="_blank" rel="noopener">When Work Became A Right: The Social Life of MGNREGA</a><span class="m">BehanBox</span><span class="b">Added to the International Bibliography of Job Guarantee Programmes, Levy Economics Institute</span></div><div class="ps"><span class="y">2026</span><a href="https://behanbox.com/2026/02/15/when-work-became-a-right-the-social-life-of-mgnrega/" target="_blank" rel="noopener">Read ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://www.indiaspend.com/governance/how-gram-panchayat-plans-in-india-often-miss-community-voices-963996" target="_blank" rel="noopener">How Panchayat Development Plans Often Miss Community Voices</a><span class="m">IndiaSpend. Co-author</span><span class="b">Nominated, Laadli Media Awards, 2026</span></div><div class="ps"><span class="y">2025</span><a href="https://www.indiaspend.com/governance/how-gram-panchayat-plans-in-india-often-miss-community-voices-963996" target="_blank" rel="noopener">Read ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://www.isignal.in/governance/why-jharkhands-parhaiyas-are-forced-to-toil-in-brick-kilns-893184" target="_blank" rel="noopener">Why Jharkhand's Parhaiyas Are Forced To Toil In Brick Kilns</a><span class="m">IndiaSpend, Scroll.in, India Development Review. Co-author</span><span class="b">Nominated, Ramnath Goenka Award, 2025</span></div><div class="ps"><span class="y">2024</span><a href="https://www.isignal.in/governance/why-jharkhands-parhaiyas-are-forced-to-toil-in-brick-kilns-893184" target="_blank" rel="noopener">Read ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://indiaspend.com/development/how-community-committees-are-improving-anganwadis-in-thiruvananthapuram-826558" target="_blank" rel="noopener">How Community Committees Are Improving Anganwadis In Thiruvananthapuram</a><span class="m">IndiaSpend</span></div><div class="ps"><span class="y">2022</span><a href="https://indiaspend.com/development/how-community-committees-are-improving-anganwadis-in-thiruvananthapuram-826558" target="_blank" rel="noopener">Read ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://www.youtube.com/watch?v=HACWASgdWG4" target="_blank" rel="noopener">Village Poverty Reduction Plan (documentary)</a><span class="m">Kudumbashree NRO. Co-producer</span></div><div class="ps"><span class="y">2022</span><a href="https://www.youtube.com/watch?v=HACWASgdWG4" target="_blank" rel="noopener">Watch ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://www.indiaspend.com/women/how-womens-self-help-groups-are-negotiating-for-jobs-power-space-735645" target="_blank" rel="noopener">How Women's Self-Help Groups Are Negotiating For Jobs, Power &amp; Space</a><span class="m">IndiaSpend, also in Scroll.in</span></div><div class="ps"><span class="y">2021</span><a href="https://www.indiaspend.com/women/how-womens-self-help-groups-are-negotiating-for-jobs-power-space-735645" target="_blank" rel="noopener">Read ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://www.indiaspend.com/how-rural-jobs-scheme-can-be-improved-to-help-returnee-migrants-stem-distress-migration" target="_blank" rel="noopener">How Rural Jobs Scheme Can Be Improved To Help Returnee Migrants</a><span class="m">IndiaSpend. Co-author</span></div><div class="ps"><span class="y">2020</span><a href="https://www.indiaspend.com/how-rural-jobs-scheme-can-be-improved-to-help-returnee-migrants-stem-distress-migration" target="_blank" rel="noopener">Read ↗</a></div></li>
+        <li><div class="pm"><a class="t" href="https://www.indiaspend.com/why-cash-transfers-cannot-replace-structural-reforms-in-agriculture" target="_blank" rel="noopener">Why Cash Transfers Cannot Replace Structural Reforms In Agriculture</a><span class="m">IndiaSpend, also in Scroll.in</span></div><div class="ps"><span class="y">2020</span><a href="https://www.indiaspend.com/why-cash-transfers-cannot-replace-structural-reforms-in-agriculture" target="_blank" rel="noopener">Read ↗</a></div></li>
+      </ol></div>
+    </section></div>
+    </div>
+    <div class="view" data-view="diaries" hidden>
+      <section class="diaries" id="diaries">
+      <div class="dia-in">
+        <div class="dia-head">
+          <span class="dia-kicker">From the field</span>
+          <h2>Field Diaries</h2>
+          <p>Photographs from fieldwork with women's collectives and farming households in rural India: the meetings, the fields, the homes and the long roads in between.</p>
+        </div>
+        <div class="dia-filters" role="group" aria-label="Filter photographs" id="diaFilters"><button type="button" data-f="all" aria-pressed="true">All <span>28</span></button><button type="button" data-f="women" aria-pressed="false">Women's collectives <span>6</span></button><button type="button" data-f="village" aria-pressed="false">Village life <span>10</span></button><button type="button" data-f="land" aria-pressed="false">Land &amp; fields <span>7</span></button><button type="button" data-f="road" aria-pressed="false">On the road <span>5</span></button></div>
+        <div class="dia-grid" id="diaGrid"><figure class="fd" data-cat="land" data-i="0"><button type="button" class="fd-open" aria-label="View larger: Paddy transplanting in flooded fields"><img src="photos/fd-18-t.jpg" data-full="photos/fd-18.jpg" width="760" height="428" alt="Paddy transplanting in flooded fields" loading="lazy"></button><figcaption><span class="fd-cat">Land &amp; fields</span>Paddy transplanting in flooded fields</figcaption></figure><figure class="fd" data-cat="women" data-i="1"><button type="button" class="fd-open" aria-label="View larger: A women&#x27;s self-help group meets on a tarpaulin in the courtyard"><img src="photos/fd-02-t.jpg" data-full="photos/fd-02.jpg" width="760" height="570" alt="A women&#x27;s self-help group meets on a tarpaulin in the courtyard" loading="lazy"></button><figcaption><span class="fd-cat">Women's collectives</span>A women&#x27;s self-help group meets on a tarpaulin in the courtyard</figcaption></figure><figure class="fd" data-cat="land" data-i="2"><button type="button" class="fd-open" aria-label="View larger: Dusk over a village pond, fringed with coconut palms"><img src="photos/fd-11-t.jpg" data-full="photos/fd-11.jpg" width="760" height="570" alt="Dusk over a village pond, fringed with coconut palms" loading="lazy"></button><figcaption><span class="fd-cat">Land &amp; fields</span>Dusk over a village pond, fringed with coconut palms</figcaption></figure><figure class="fd" data-cat="road" data-i="3"><button type="button" class="fd-open" aria-label="View larger: Wading across a river on the way to the village"><img src="photos/fd-12-t.jpg" data-full="photos/fd-12.jpg" width="760" height="570" alt="Wading across a river on the way to the village" loading="lazy"></button><figcaption><span class="fd-cat">On the road</span>Wading across a river on the way to the village</figcaption></figure><figure class="fd" data-cat="women" data-i="4"><button type="button" class="fd-open" aria-label="View larger: Hands joined at the close of a group meeting"><img src="photos/fd-15-t.jpg" data-full="photos/fd-15.jpg" width="760" height="570" alt="Hands joined at the close of a group meeting" loading="lazy"></button><figcaption><span class="fd-cat">Women's collectives</span>Hands joined at the close of a group meeting</figcaption></figure><figure class="fd" data-cat="village" data-i="5"><button type="button" class="fd-open" aria-label="View larger: A whitewashed village house with painted wall writing"><img src="photos/fd-05-t.jpg" data-full="photos/fd-05.jpg" width="760" height="570" alt="A whitewashed village house with painted wall writing" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>A whitewashed village house with painted wall writing</figcaption></figure><figure class="fd" data-cat="village" data-i="6"><button type="button" class="fd-open" aria-label="View larger: Lunch in the field: rice, dal and greens"><img src="photos/fd-27-t.jpg" data-full="photos/fd-27.jpg" width="760" height="428" alt="Lunch in the field: rice, dal and greens" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>Lunch in the field: rice, dal and greens</figcaption></figure><figure class="fd" data-cat="women" data-i="7"><button type="button" class="fd-open" aria-label="View larger: Self-help group members gather with their registers"><img src="photos/fd-06-t.jpg" data-full="photos/fd-06.jpg" width="760" height="570" alt="Self-help group members gather with their registers" loading="lazy"></button><figcaption><span class="fd-cat">Women's collectives</span>Self-help group members gather with their registers</figcaption></figure><figure class="fd" data-cat="land" data-i="8"><button type="button" class="fd-open" aria-label="View larger: A canopy of yellow blossoms over the forest"><img src="photos/fd-10-t.jpg" data-full="photos/fd-10.jpg" width="760" height="570" alt="A canopy of yellow blossoms over the forest" loading="lazy"></button><figcaption><span class="fd-cat">Land &amp; fields</span>A canopy of yellow blossoms over the forest</figcaption></figure><figure class="fd" data-cat="village" data-i="9"><button type="button" class="fd-open" aria-label="View larger: An afternoon rest on the veranda"><img src="photos/fd-23-t.jpg" data-full="photos/fd-23.jpg" width="760" height="428" alt="An afternoon rest on the veranda" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>An afternoon rest on the veranda</figcaption></figure><figure class="fd" data-cat="land" data-i="10"><button type="button" class="fd-open" aria-label="View larger: Weeding a young crop by hand"><img src="photos/fd-17-t.jpg" data-full="photos/fd-17.jpg" width="428" height="760" alt="Weeding a young crop by hand" loading="lazy"></button><figcaption><span class="fd-cat">Land &amp; fields</span>Weeding a young crop by hand</figcaption></figure><figure class="fd" data-cat="road" data-i="11"><button type="button" class="fd-open" aria-label="View larger: A curious goat joins the selfie"><img src="photos/fd-21-t.jpg" data-full="photos/fd-21.jpg" width="570" height="760" alt="A curious goat joins the selfie" loading="lazy"></button><figcaption><span class="fd-cat">On the road</span>A curious goat joins the selfie</figcaption></figure><figure class="fd" data-cat="women" data-i="12"><button type="button" class="fd-open" aria-label="View larger: A group discussion around a printed chart"><img src="photos/fd-08-t.jpg" data-full="photos/fd-08.jpg" width="570" height="760" alt="A group discussion around a printed chart" loading="lazy"></button><figcaption><span class="fd-cat">Women's collectives</span>A group discussion around a printed chart</figcaption></figure><figure class="fd" data-cat="village" data-i="13"><button type="button" class="fd-open" aria-label="View larger: Courtyard poultry, a household livelihood"><img src="photos/fd-03-t.jpg" data-full="photos/fd-03.jpg" width="760" height="570" alt="Courtyard poultry, a household livelihood" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>Courtyard poultry, a household livelihood</figcaption></figure><figure class="fd" data-cat="road" data-i="14"><button type="button" class="fd-open" aria-label="View larger: Evening on a village road"><img src="photos/fd-19-t.jpg" data-full="photos/fd-19.jpg" width="428" height="760" alt="Evening on a village road" loading="lazy"></button><figcaption><span class="fd-cat">On the road</span>Evening on a village road</figcaption></figure><figure class="fd" data-cat="women" data-i="15"><button type="button" class="fd-open" aria-label="View larger: Listening closely during a meeting"><img src="photos/fd-04-t.jpg" data-full="photos/fd-04.jpg" width="760" height="570" alt="Listening closely during a meeting" loading="lazy"></button><figcaption><span class="fd-cat">Women's collectives</span>Listening closely during a meeting</figcaption></figure><figure class="fd" data-cat="village" data-i="16"><button type="button" class="fd-open" aria-label="View larger: Grain, seeds and grinding stones drying in the sun"><img src="photos/fd-26-t.jpg" data-full="photos/fd-26.jpg" width="760" height="428" alt="Grain, seeds and grinding stones drying in the sun" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>Grain, seeds and grinding stones drying in the sun</figcaption></figure><figure class="fd" data-cat="land" data-i="17"><button type="button" class="fd-open" aria-label="View larger: A hillside homestead with a tiled roof"><img src="photos/fd-01-t.jpg" data-full="photos/fd-01.jpg" width="760" height="428" alt="A hillside homestead with a tiled roof" loading="lazy"></button><figcaption><span class="fd-cat">Land &amp; fields</span>A hillside homestead with a tiled roof</figcaption></figure><figure class="fd" data-cat="road" data-i="18"><button type="button" class="fd-open" aria-label="View larger: Walking the village paths"><img src="photos/fd-22-t.jpg" data-full="photos/fd-22.jpg" width="570" height="760" alt="Walking the village paths" loading="lazy"></button><figcaption><span class="fd-cat">On the road</span>Walking the village paths</figcaption></figure><figure class="fd" data-cat="women" data-i="19"><button type="button" class="fd-open" aria-label="View larger: Women arrive for a meeting"><img src="photos/fd-09-t.jpg" data-full="photos/fd-09.jpg" width="570" height="760" alt="Women arrive for a meeting" loading="lazy"></button><figcaption><span class="fd-cat">Women's collectives</span>Women arrive for a meeting</figcaption></figure><figure class="fd" data-cat="village" data-i="20"><button type="button" class="fd-open" aria-label="View larger: A welcome of handloom cloth and fresh leaves"><img src="photos/fd-13-t.jpg" data-full="photos/fd-13.jpg" width="570" height="760" alt="A welcome of handloom cloth and fresh leaves" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>A welcome of handloom cloth and fresh leaves</figcaption></figure><figure class="fd" data-cat="land" data-i="21"><button type="button" class="fd-open" aria-label="View larger: Sunset over the settlement"><img src="photos/fd-20-t.jpg" data-full="photos/fd-20.jpg" width="760" height="428" alt="Sunset over the settlement" loading="lazy"></button><figcaption><span class="fd-cat">Land &amp; fields</span>Sunset over the settlement</figcaption></figure><figure class="fd" data-cat="village" data-i="22"><button type="button" class="fd-open" aria-label="View larger: Children outside a mud house"><img src="photos/fd-00-t.jpg" data-full="photos/fd-00.jpg" width="760" height="428" alt="Children outside a mud house" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>Children outside a mud house</figcaption></figure><figure class="fd" data-cat="road" data-i="23"><button type="button" class="fd-open" aria-label="View larger: A portrait from the field"><img src="photos/fd-16-t.jpg" data-full="photos/fd-16.jpg" width="570" height="760" alt="A portrait from the field" loading="lazy"></button><figcaption><span class="fd-cat">On the road</span>A portrait from the field</figcaption></figure><figure class="fd" data-cat="village" data-i="24"><button type="button" class="fd-open" aria-label="View larger: Free-ranging poultry in the courtyard"><img src="photos/fd-07-t.jpg" data-full="photos/fd-07.jpg" width="760" height="570" alt="Free-ranging poultry in the courtyard" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>Free-ranging poultry in the courtyard</figcaption></figure><figure class="fd" data-cat="land" data-i="25"><button type="button" class="fd-open" aria-label="View larger: Open ground at the edge of the village"><img src="photos/fd-24-t.jpg" data-full="photos/fd-24.jpg" width="760" height="428" alt="Open ground at the edge of the village" loading="lazy"></button><figcaption><span class="fd-cat">Land &amp; fields</span>Open ground at the edge of the village</figcaption></figure><figure class="fd" data-cat="village" data-i="26"><button type="button" class="fd-open" aria-label="View larger: Children at play in a courtyard"><img src="photos/fd-14-t.jpg" data-full="photos/fd-14.jpg" width="760" height="570" alt="Children at play in a courtyard" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>Children at play in a courtyard</figcaption></figure><figure class="fd" data-cat="village" data-i="27"><button type="button" class="fd-open" aria-label="View larger: A village building, with cable drums waiting outside"><img src="photos/fd-25-t.jpg" data-full="photos/fd-25.jpg" width="760" height="428" alt="A village building, with cable drums waiting outside" loading="lazy"></button><figcaption><span class="fd-cat">Village life</span>A village building, with cable drums waiting outside</figcaption></figure></div>
+      </div>
+    </section>
+    </div>
+    <div class="view" data-view="talks" hidden>
+      <div class="pagehead"><div class="ph-in"><span class="ph-kick">Speaking</span><h1>Talks &amp; conferences</h1><p>Conferences, panels and national trainings for government officials.</p></div></div>
+      <div class="layout"><section class="sec" id="talks">
+      
+      <ul class="dated">
+        <li><span class="y">May 2026</span><div><span class="t">Core Committee Member, Conference on the Future of Foreign Aid</span><div class="m">Center on Global Poverty, Johns Hopkins University</div></div></li>
+        <li><span class="y">Apr 2026</span><div><span class="t">Discussant, talk by Rupa Viswanath on caste violence</span><div class="m">University of Göttingen</div></div></li>
+        <li><span class="y">2024</span><div><span class="t">Participant, Migration, Informality and Development</span><div class="m">Indian Institute for Human Settlements</div></div></li>
+        <li><span class="y">Jul 2023</span><div><span class="t">Invited Speaker, Land Tenures and Climate Action</span><div class="m">Centre for Land Governance and Azim Premji University</div></div></li>
+        <li><span class="y">Jul 2022</span><div><span class="t">National Resource Person, Training on Participatory Rural Planning</span><div class="m">Ministry of Rural Development, Government of India</div></div></li>
+        <li><span class="y">May 2022</span><div><span class="t">Invited Contributor, Localizing the SDGs</span><div class="m">Ministry of Panchayati Raj, Kerala Institute of Local Administration</div></div></li>
+        <li><span class="y">Mar 2022</span><div><span class="t">Participant, Building Sustainable Governance Prototypes</span><div class="m">Pradan and Kudumbashree, Jharkhand</div></div></li>
+        <li><span class="y">Oct 2021</span><div><span class="t">Panelist, Land Rights and Women</span><div class="m">Sankalp Global Summit</div></div></li>
+      </ul>
+    </section></div>
+    </div>
+    <div class="view" data-view="cv" hidden><div class="pagehead"><div class="ph-in"><span class="ph-kick">Curriculum vitae</span><h1>CV</h1><p>The full CV will be available to download here soon.</p></div></div><div class="layout"><section class="sec"><p class="cvnote">The PDF is on its way. Meanwhile, the <a href="#home">home page</a> covers education, scholarships and career, and <a href="#publications">Publications</a> lists all written work.</p></section></div></div>
+  </main>
+  <footer class="foot2">
+  <div class="f-in">
+    <div class="f-col"><span class="f-name">Padmini Ramesh</span><span>PhD Student, Department of Sociology</span><span>Johns Hopkins University</span></div>
+    <div class="f-col"><span class="f-k">Contact</span><span class="f-email"><a id="emailText" href="mailto:pramesh6@jh.edu">pramesh6@jh.edu</a> <button class="copy" id="copyEmail" type="button">Copy</button></span><span>533 Mergenthaler Hall, 3400 N. Charles Street<br>Baltimore, MD 21218, USA</span></div>
+    <div class="f-col"><span class="f-k">Elsewhere</span><a href="https://scholar.google.com/citations?user=ZpzzuZ4AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a><a href="https://www.linkedin.com/in/padmini-ramesh-5603aa123/" target="_blank" rel="noopener">LinkedIn</a><a href="https://soc.jhu.edu/directory/padmini-ramesh/" target="_blank" rel="noopener">Johns Hopkins profile</a></div>
+  </div>
+  <div class="f-base"><span>© 2026 Padmini Ramesh</span><span>Sociology · Johns Hopkins University</span></div>
+</footer>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
+  <figure class="lb-fig"><img id="lbImg" alt=""><figcaption><span id="lbCat"></span><span id="lbCap"></span><span id="lbCount"></span></figcaption></figure>
+  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next photo">›</button>
+</div>
+<script>
+(function(){
+  var EMAIL='pramesh6@jh.edu';
+  var menuToggle=document.getElementById('menuToggle'), nav=document.getElementById('siteNav');
+  var drops=[].slice.call(document.querySelectorAll('.drop'));
+  var mq=window.matchMedia('(max-width: 860px)');
+  function closeDrops(except){drops.forEach(function(d){ if(d!==except){d.setAttribute('aria-expanded','false');document.getElementById(d.getAttribute('aria-controls')).hidden=true;} });}
+  drops.forEach(function(d){d.addEventListener('click',function(e){e.stopPropagation();var m=document.getElementById(d.getAttribute('aria-controls'));var open=m.hidden;closeDrops(d);m.hidden=!open;d.setAttribute('aria-expanded',open);});});
+  function setNav(o){menuToggle.setAttribute('aria-expanded',o);nav.hidden=!o;menuToggle.textContent=o?'Close':'Menu';}
+  function sync(){ if(mq.matches) setNav(false); else nav.hidden=false; closeDrops(); }
+  menuToggle.addEventListener('click',function(){setNav(nav.hidden);});
+  document.addEventListener('click',function(e){ if(!e.target.closest('.has-menu')) closeDrops(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){closeDrops(); if(mq.matches) setNav(false);} });
+  nav.addEventListener('click',function(e){var a=e.target.closest('a'); if(a&&a.getAttribute('href').charAt(0)==='#'){closeDrops(); if(mq.matches) setNav(false);} });
+  (mq.addEventListener?mq.addEventListener('change',sync):mq.addListener(sync)); sync();
+
+  function copy(el,label,node){
+    function flash(t){el.textContent=t;setTimeout(function(){el.textContent=label;},1600);}
+    function fb(){var r=document.createRange();r.selectNodeContents(node);var s=getSelection();s.removeAllRanges();s.addRange(r);flash('Selected, press Ctrl+C');}
+    try{navigator.clipboard.writeText(EMAIL).then(function(){flash('Email copied');},fb);}catch(e){fb();}
+  }
+  var cb=document.getElementById('copyEmail'); cb.addEventListener('click',function(){copy(cb,'Copy',document.getElementById('emailText'));});
+  /* Field Diaries: filters + lightbox */
+  var figs=[].slice.call(document.querySelectorAll('.fd'));
+  var fbtns=[].slice.call(document.querySelectorAll('.dia-filters button'));
+  function diaFilter(f){
+    fbtns.forEach(function(x){x.setAttribute('aria-pressed',x.getAttribute('data-f')===f);});
+    figs.forEach(function(fg){fg.hidden=!(f==='all'||fg.getAttribute('data-cat')===f);});
+  }
+  fbtns.forEach(function(b){b.addEventListener('click',function(){diaFilter(b.getAttribute('data-f'));});});
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap'), lbCat=document.getElementById('lbCat'), lbCount=document.getElementById('lbCount');
+  var cur=0, list=[], lastFocus=null;
+  function visible(){return figs.filter(function(f){return !f.hidden;});}
+  function show(k){
+    list=visible(); cur=(k+list.length)%list.length;
+    var f=list[cur], img=f.querySelector('img');
+    lbImg.src=img.getAttribute('data-full'); lbImg.alt=img.alt;
+    lbCap.textContent=img.alt; lbCat.textContent=f.querySelector('.fd-cat').textContent;
+    lbCount.textContent=(cur+1)+' of '+list.length;
+  }
+  function open(f){lastFocus=document.activeElement; list=visible(); show(list.indexOf(f)); lb.hidden=false; document.body.style.overflow='hidden'; document.getElementById('lbClose').focus();}
+  function close(){lb.hidden=true; document.body.style.overflow=''; if(lastFocus) lastFocus.focus();}
+  figs.forEach(function(f){f.querySelector('.fd-open').addEventListener('click',function(){open(f);});});
+  document.getElementById('lbClose').addEventListener('click',close);
+  document.getElementById('lbPrev').addEventListener('click',function(){show(cur-1);});
+  document.getElementById('lbNext').addEventListener('click',function(){show(cur+1);});
+  lb.addEventListener('click',function(e){if(e.target===lb) close();});
+  document.addEventListener('keydown',function(e){ if(lb.hidden) return; if(e.key==='Escape') close(); else if(e.key==='ArrowRight') show(cur+1); else if(e.key==='ArrowLeft') show(cur-1); });
+  var tx=null; lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){ if(tx===null) return; var dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50) show(cur+(dx<0?1:-1)); tx=null; });
+
+  /* Pages */
+  var views=[].slice.call(document.querySelectorAll('.view'));
+  var groups=[].slice.call(document.querySelectorAll('.pgroup'));
+  var subs=[].slice.call(document.querySelectorAll('.subtabs a'));
+  var navItems=[].slice.call(document.querySelectorAll('[data-nav]'));
+  var MAP={home:['home'],about:['home','about'],education:['home','education'],experience:['home','experience'],field:['home','field'],
+    publications:['publications','all'],articles:['publications','articles'],reports:['publications','reports'],media:['publications','media'],
+    diaries:['diaries','all'],women:['diaries','women'],village:['diaries','village'],land:['diaries','land'],road:['diaries','road'],
+    talks:['talks'],cv:['cv']};
+  function route(){
+    var h=(location.hash||'#home').slice(1), r=MAP[h]||['home'];
+    views.forEach(function(v){v.hidden=v.getAttribute('data-view')!==r[0];});
+    navItems.forEach(function(n){n.classList.toggle('on',n.getAttribute('data-nav')===r[0]);});
+    if(r[0]==='publications'){var g=r[1];groups.forEach(function(x){x.hidden=!(g==='all'||x.getAttribute('data-group')===g);});subs.forEach(function(a){a.setAttribute('aria-current',a.getAttribute('data-sub')===g?'page':'false');});}
+    if(r[0]==='diaries') diaFilter(r[1]);
+    if(r[0]==='home' && r[1]){var el=document.getElementById(r[1]); if(el){setTimeout(function(){el.scrollIntoView();},0); return;}}
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route); route();
+})();
+</script>
+</body>
+</html>
